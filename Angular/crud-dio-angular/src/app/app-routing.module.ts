@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { UserListComponent } from './pages/users/user-list/user-list.component';
 import { UserFormComponent } from './pages/users/user-form/user-form.component';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'users/form/:id',
     component: UserFormComponent
+  },
+  {
+    path: 'data-binding',
+    component: DataBindingComponent
   }
 ]
 
