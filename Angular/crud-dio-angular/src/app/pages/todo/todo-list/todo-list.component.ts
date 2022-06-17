@@ -18,7 +18,13 @@ export class TodoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    let items: any = localStorage.getItem('todos');
+    let todos = JSON.parse(items);
+    if(!todos) {
+      this.todos = [];
+    } else {
+      this.todos = todos;
+    }
   }
 
   addTodo(title: string) {
@@ -28,12 +34,13 @@ export class TodoListComponent implements OnInit {
       title: title,
       done: false
     });
-    console.log(this.todos);
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 
   removeTodo(todo: any): void {
     let index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 
 }
