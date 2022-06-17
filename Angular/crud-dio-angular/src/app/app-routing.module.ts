@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserListComponent } from './pages/users/user-list/user-list.component';
 import { UserFormComponent } from './pages/users/user-form/user-form.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
+import { TodoListComponent } from './pages/todo/todo-list/todo-list.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'data-binding',
     component: DataBindingComponent
+  },
+  {
+    path: 'todo',
+    component: TodoListComponent
   }
 ]
 
