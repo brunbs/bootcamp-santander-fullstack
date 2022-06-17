@@ -1,0 +1,37 @@
+<div class="form-group">
+    <label for="number">Number:</label>
+    <input type="text" [(ngModel)]="text" class="form-control" id="number">
+</div>
+
+<div class="">
+    <p>Sem formatação:</p>
+    <p> {{ number | number }} </p>
+
+    <p>Com formatação: </p>
+    <p> {{ number | number:'2.0-1'}} </p>
+
+    <p>Currency: </p>
+    <p> {{ number | currency:'BRL' }} </p>
+
+    <p>LowerCase: </p>
+    <p> {{ text | lowercase }} </p>
+
+    <p>Data de hoje: </p>
+    <p> {{ date }} </p>
+
+    <p>Data de hoje formatada: </p>
+    <p> {{ date | date}} </p>
+
+    <p>Data de hoje formato brasileiro: </p>
+    <p> {{ date | date: 'dd/MM/YYYY'}} </p>
+
+    <p>Data Formatada: </p>
+    <p> {{ date | date: 'full' | uppercase}} </p>
+
+    <p>Pessoa: </p>
+    <p> {{ pessoa | json }} </p>
+
+    <p>Slice: </p>
+    <p> {{ text | slice:1:4 }} </p>
+
+</div>
