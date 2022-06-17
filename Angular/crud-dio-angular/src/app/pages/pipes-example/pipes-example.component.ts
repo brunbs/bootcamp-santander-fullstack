@@ -14,11 +14,17 @@ export class PipesExampleComponent implements OnInit {
     nome: 'Bruno',
     idade: 31,
     profissao: 'programador'
-  }
+  };
+
+  nomes = ['Brunowwww'];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  add(text: string) {
+    this.nomes.push(text);
   }
 
 }
